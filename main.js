@@ -1,15 +1,14 @@
 //DEFINIZIONE VARIABILI 
-const nomePasseggero = document.getElementById( "name" )
-const kmPercorso = document.getElementById( "km" )
-const etaPasseggero = document.getElementById( "eta" )
-const sendButton = document.getElementById( "send-btn" )
-const cancelButton = document.getElementById ( "cancel-btn" )
-const prezzoBase = (kmPercorso * 0.21);
-let prezzoBiglietto = 0
-let prezzoOver = 0
-let prezzoUnder = 0
+const nomePasseggero = document.getElementById("name");
+const kmPercorso = document.getElementById("km").value;
+const etaPasseggero = document.getElementById("eta");
+const sendButton = document.getElementById("send-btn");
+const cancelButton = document.getElementById ("cancel-btn");
+const prezzoBase = (kmPercorso * (21/100));
+let prezzoBiglietto;
+let prezzoOver;
+let prezzoUnder; 
 
-console.log(prezzoBase)
 //Applicazione sconti
 sendButton.addEventListener("click",
     function () {
@@ -26,8 +25,8 @@ sendButton.addEventListener("click",
 
         } else if (etaPasseggero.value >= 65){
             prezzoOver = (prezzoBase.value * (60/100));
-            prezzoOver = prezzoOver.toFixed(2)
-            console.log('Prezzo biglietto over 65 ' + prezzoBiglietto.value + '€');
+            prezzoBiglietto = prezzoOver.toFixed(2)
+            console.log('Prezzo biglietto over 65 ' + prezzoBiglietto.value0 + '€');
             
             document.getElementById("nome-passeggero").innerHTML = nomePasseggero.value
             document.getElementById("offerta").innerHTML = "Tariffa ridotta Over 65"
@@ -45,7 +44,6 @@ sendButton.addEventListener("click",
             document.getElementById("CP").innerHTML = Math.floor(Math.random() * 99999) + 1;
             document.getElementById("price").innerHTML = prezzoBiglietto
         }
-
 })
 
 cancelButton.addEventListener("click", function(){
@@ -53,11 +51,4 @@ cancelButton.addEventListener("click", function(){
 })
 
 
-
-
-
-
-
-
-//Applicazione sconti
 
