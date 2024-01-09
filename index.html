@@ -8,52 +8,52 @@
 </head>
 
 <body>
-    <div>
-        <div class="d-flex mb-2 justify-content-center">
-            <div class="m-4">
-                <label for="name" class="fw-bold">Nome Cognome</label>
-                <input type="text" id="name">
+    <h1 class="text-center ">Inserisci i tuoi dati</h1>
+    <div class="container bg-secondary border rounded mt-3 p-1">
+        <div class="d-flex mb-2 justify-content-center text-center">
+            <div class="m-4 col-3">
+                <label for="name" class="form-label fw-bold">Nome Cognome</label>
+                <input type="text" class="form-control" id="name" name="nomeCognome">
             </div>   
-            <div class="m-4">
-                <label for="Km" class="fw-bold">Km da percorrere</label>
-                <input type="text" id="km">
+            <div class="m-4 col-3">
+                <label for="km" class="form-label fw-bold">Km da percorrere</label>
+                <input type="number" class="form-control" id="km" name="kilometri" min="10">
             </div>    
-            <div class="m-4">
-                <label for="eta" class="fw-bold">Età</label>
-                <input type="text" id="eta">
+            <div class="m-4 col-3">
+                <label for="eta" class="form-label fw-bold">Età</label>
+                <input type="number" class="form-control" id="eta" name="fasciaEta" min="1" max="100">
             </div>
         </div>
         <div class="d-flex justify-content-center">
-            <button id="send-btn" class="mx-2">Genera</button>
-            <button id="cancel-btn" class="mx-2">Annulla</button>
+            <button id="send-btn" class="mx-2 btn btn-primary mb-2">Genera</button>
+            <button id="cancel-btn" class="mx-2 btn btn-danger mb-2">Annulla</button>
         </div>
-
     </div>
     
-    <div class=" d-flex justify-content-between  mt-4 border align-items-center text-align-center bg-warning">
-        <div class="p-2">
+    <div class="d-flex justify-content-between col-11 m-auto border rounded  mt-4 border align-items-center text-center bg-warning">
+        <div class="p-2 text-center">
             <h5 class="m-1">NOME PASSEGGERO</h5>
             <p id="nome-passeggero" class="m-auto p-2"></p>
         </div>
 
-        <div class="p-2">
+        <div class="p-2 text-center">
             <h5 class="m-1">Offerta</h5>
             <p id="offerta" class="m-auto p-2"></p>
         </div>
 
-        <div class="p-2">
+        <div class="p-2 text-center">
             <h5 class="m-1">Carrozza</h5>
             <p id="carrozza" class="m-auto p-2"></p>
 
         </div>
 
-        <div class="p-2">
+        <div class="p-2 text-center">
             <h5 class="m-1">Codice CP</h5>
             <p id="CP" class="m-auto p-2"></p>
 
         </div>
 
-        <div class="p-2">
+        <div class="p-2 text-center">
             <h5 class="m-1">Costo Biglietto</h5>
             <p id="price" class="m-auto p-2"></p>
         </div>
